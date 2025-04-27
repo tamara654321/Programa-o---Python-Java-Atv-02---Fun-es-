@@ -1,0 +1,15 @@
+import random
+
+def rolar_dado():
+    resultado = random.randint(1, 6)
+    print(f"O número sorteado foi: {resultado}")
+
+def menu_dados():
+    while True:
+        print("\n=== Rolador de Dados ===")
+        rolar_dado()
+        resposta = input("Deseja encerrar? (s para sim / qualquer tecla para continuar): ")
+        if resposta.lower() == "s":
+            break
+
+menu_dados()
