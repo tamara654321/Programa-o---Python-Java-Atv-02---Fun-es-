@@ -1,0 +1,56 @@
+def soma():
+    numero1 = float(input("Informe o primeiro valor: "))
+    numero2 = float(input("Informe o segundo valor: "))
+    resultado = numero1 + numero2
+    print(f"Resultado da soma entre {numero1} e {numero2} é: {resultado}")
+
+def subtracao():
+    numero1 = float(input("Informe o primeiro valor: "))
+    numero2 = float(input("Informe o segundo valor: "))
+    resultado = numero1 - numero2
+    print(f"Resultado da subtração entre {numero1} e {numero2} é: {resultado}")
+
+def multiplicacao():
+    numero1 = float(input("Informe o primeiro valor: "))
+    numero2 = float(input("Informe o segundo valor: "))
+    resultado = numero1 * numero2
+    print(f"Resultado da multiplicação entre {numero1} e {numero2} é: {resultado}")
+
+def divisao():
+    numero1 = float(input("Informe o primeiro valor: "))
+    numero2 = float(input("Informe o segundo valor: "))
+    if numero2 != 0:
+        resultado = numero1 / numero2
+        print(f"Resultado da divisão de {numero1} por {numero2} é: {resultado}")
+    else:
+        print("Erro: divisão por zero não é permitida!")
+
+def operacao(opcao):
+    if opcao == "1":
+        soma()
+    elif opcao == "2":
+        subtracao()
+    elif opcao == "3":
+        multiplicacao()
+    elif opcao == "4":
+        divisao()
+    elif opcao == "5":
+        print("Fechando a calculadora...")
+    else:
+        print("Opção inválida. Por favor, selecione novamente.")
+
+def menu_calculadora():
+    while True:
+        print("\n====== MENU CALCULADORA ======")
+        print("Selecione a operação desejada:")
+        print("1 - Soma")
+        print("2 - Subtração")
+        print("3 - Multiplicação")
+        print("4 - Divisão")
+        print("5 - Sair")
+        opcao = input("Digite a opção: ")
+        operacao(opcao)
+        if opcao == "5":
+            break
+
+menu_calculadora()
