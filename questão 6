@@ -1,0 +1,15 @@
+def contar_vogais_texto():
+    frase = input("Informe uma palavra ou frase: ")
+    lista_vogais = "aeiouAEIOU"
+    total_vogais = sum(1 for letra in frase if letra in lista_vogais)
+    print(f"Quantidade de vogais no texto: {total_vogais}")
+
+def menu_vogais():
+    while True:
+        print("\n=== Verificador de Vogais ===")
+        contar_vogais_texto()
+        opcao = input("Deseja finalizar? (s para sim / qualquer tecla para continuar): ")
+        if opcao.lower() == "s":
+            break
+
+menu_vogais()
