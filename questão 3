@@ -1,0 +1,18 @@
+def calcular_media_aluno():
+    notas = []
+    for i in range(3):
+        nota = float(input(f"Informe a nota {i + 1}: "))
+        notas.append(nota)
+    media_final = sum(notas) / len(notas)
+    resultado = "Aprovado" if media_final >= 7 else "Reprovado"
+    print(f"Média final: {media_final:.2f} - Situação: {resultado}")
+
+def menu_media():
+    while True:
+        print("\n=== Sistema de Cálculo de Média ===")
+        calcular_media_aluno()
+        opcao = input("Deseja encerrar? (s para sim / qualquer tecla para continuar): ")
+        if opcao.lower() == "s":
+            break
+
+menu_media()
