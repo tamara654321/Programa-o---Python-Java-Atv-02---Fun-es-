@@ -1,0 +1,16 @@
+def checar_palindromo():
+    texto = input("Informe uma palavra ou frase: ").replace(" ", "").lower()
+    if texto == texto[::-1]:
+        print("É um palíndromo!")
+    else:
+        print("Não é um palíndromo.")
+
+def menu_palindromo():
+    while True:
+        print("\n=== Detector de Palíndromos ===")
+        checar_palindromo()
+        resposta = input("Deseja encerrar? (s para sim / qualquer tecla para continuar): ")
+        if resposta.lower() == "s":
+            break
+
+menu_palindromo()
