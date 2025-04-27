@@ -1,0 +1,37 @@
+def km_para_milhas():
+    quilometros = float(input("Informe a distância em quilômetros: "))
+    milhas = quilometros * 0.621371
+    print(f"{quilometros} quilômetros equivalem a {milhas:.2f} milhas.")
+
+def metros_para_centimetros():
+    metros = float(input("Informe o valor em metros: "))
+    centimetros = metros * 100
+    print(f"{metros} metros correspondem a {centimetros} centímetros.")
+
+def litros_para_mililitros():
+    litros = float(input("Informe o volume em litros: "))
+    mililitros = litros * 1000
+    print(f"{litros} litros correspondem a {mililitros} mililitros.")
+
+def menu_conversor():
+    while True:
+        print("\n=== Conversor de Medidas ===")
+        print("1 - Quilômetros para Milhas")
+        print("2 - Metros para Centímetros")
+        print("3 - Litros para Mililitros")
+        print("4 - Encerrar")
+        opcao = input("Digite o número da opção desejada: ")
+        
+        if opcao == "1":
+            km_para_milhas()
+        elif opcao == "2":
+            metros_para_centimetros()
+        elif opcao == "3":
+            litros_para_mililitros()
+        elif opcao == "4":
+            print("Finalizando o conversor...")
+            break
+        else:
+            print("Opção inválida, tente novamente.")
+
+menu_conversor()
